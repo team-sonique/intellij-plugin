@@ -1,19 +1,26 @@
-<idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>Template</name>
-    <vendor>JetBrains</vendor>
+<idea-plugin url="http://github.com/team-sonique/intellij-plugin">
+    <id>sonique.intellij.plugin</id>
+    <name>Sonqiue Awesome Utils</name>
+    <vendor url="https://github.com/team-sonique" email="team.sonique.sns@gmail.com">team-sonique</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService"/>
-        <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService"/>
-    </extensions>
-
     <projectListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener"
+        <listener class="sonique.intellij.recentproject.listener.ProjectAuditListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
+
+
+    <actions>
+        <action id="sonique.plugin.recent.projects"
+                class="sonique.intellij.recentproject.action.RecentProjectsAction"
+                text="Recent Projects">
+            <add-to-group group-id="ViewRecentActions" anchor="first"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control alt P"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt P"/>
+        </action>
+    </actions>
+
 </idea-plugin>
