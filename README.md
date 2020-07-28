@@ -1,8 +1,8 @@
 # Sonique Awesome IntelliJ Plugin
 
 [![Build](https://github.com/team-sonique/intellij-plugin/workflows/Build/badge.svg)][gh:build]
-[![Version](https://img.shields.io/jetbrains/plugin/v/14783-sonqiue-awesome-utils.svg)][jb:plugin]
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/14783-sonqiue-awesome-utils.svg)][jb:plugin]
+[![Version](https://img.shields.io/jetbrains/plugin/v/14788-sonique-awesome-utils.svg)][jb:plugin]
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/14788-sonique-awesome-utils.svg)][jb:plugin]
 
 <!-- Plugin description -->
 IntelliJ Plugin with useful features, for moving between open projects and generating accessor methods and builder injectors.
@@ -19,4 +19,4 @@ IntelliJ Plugin with useful features, for moving between open projects and gener
 
 
 [gh:build]: https://github.com/team-sonique/intellij-plugin/actions?query=workflow%3ABuild
-[jb:plugin]: https://plugins.jetbrains.com/plugin/14783-sonqiue-awesome-utils
+[jb:plugin]: https://plugins.jetbrains.com/plugin/14788-sonique-awesome-utils
