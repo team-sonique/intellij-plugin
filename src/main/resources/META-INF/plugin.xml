@@ -14,7 +14,7 @@
     </projectListeners>
 
     <extensions defaultExtensionNs="com.intellij">
-        <bundledKeymap file="SoniqueKeymap.xml"/>
+        <bundledKeymap file="Sonique Keymap.xml"/>
     </extensions>
 
     <actions>
