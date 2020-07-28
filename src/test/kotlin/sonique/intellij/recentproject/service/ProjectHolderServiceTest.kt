@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test
 import org.mockito.Mockito
 
 internal class ProjectHolderServiceTest {
-    val project1 = Mockito.mock(Project::class.java)
-    val project2 = Mockito.mock(Project::class.java)
-    val project3 = Mockito.mock(Project::class.java)
+    private val project1 = Mockito.mock(Project::class.java)
+    private val project2 = Mockito.mock(Project::class.java)
+    private val project3 = Mockito.mock(Project::class.java)
 
     val p = ProjectHolderService()
 

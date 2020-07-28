@@ -1,11 +1,12 @@
 <idea-plugin url="http://github.com/team-sonique/intellij-plugin">
     <id>sonique.intellij.plugin</id>
     <name>Sonqiue Awesome Utils</name>
-    <vendor url="https://github.com/team-sonique" email="team.sonique.sns@gmail.com">team-sonique</vendor>
+    <vendor>team-sonique</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <projectListeners>
         <listener class="sonique.intellij.recentproject.listener.ProjectAuditListener"
@@ -14,6 +15,27 @@
 
 
     <actions>
+        <group id="builder.plugin.group" text="Builder..." description="Builder generator" popup="true">
+            <add-to-group group-id="GenerateGroup" relative-to-action="GenerateEquals" anchor="after"/>
+            <action id="builder.plugin.generate.with.method"
+                    class="sonique.intellij.generate.builder.GenerateWithMethodAction"
+                    text="with Method"
+                    description="Generate 'With' Methods"/>
+            <action id="builder.plugin.generate.with.name.method"
+                    class="sonique.intellij.generate.builder.GenerateWithNameMethodAction"
+                    text="withName Method"
+                    description="Generate 'WithName' Methods"/>
+        </group>
+
+
+        <group id="accessor.plugin.group" text="Accessor..." description="Accessor generator" popup="true">
+            <add-to-group group-id="GenerateGroup" relative-to-action="GenerateEquals" anchor="after"/>
+            <action id="builder.plugin.generate.accessor.method"
+                    class="sonique.intellij.generate.accessor.GenerateAccessorMethodAction"
+                    text="accessor Method"
+                    description="Generate accessor methods"/>
+        </group>
+
         <action id="sonique.plugin.recent.projects"
                 class="sonique.intellij.recentproject.action.RecentProjectsAction"
                 text="Recent Projects">

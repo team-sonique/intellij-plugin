@@ -3,13 +3,9 @@ import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    // Java support
     id("java")
-    // Kotlin support
     id("org.jetbrains.kotlin.jvm") version "1.3.72"
-    // gradle-intellij-plugin - read more: https://github.com/JetBrains/gradle-intellij-plugin
     id("org.jetbrains.intellij") version "0.4.21"
-    // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
     id("org.jetbrains.changelog") version "0.4.0"
 }
 
@@ -32,12 +28,12 @@ repositories {
     mavenCentral()
     jcenter()
 }
+
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testImplementation("org.mockito:mockito-core:3.4.4")
-    testImplementation("org.mockito:mockito-junit-jupiter:3.4.4")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
@@ -50,10 +46,7 @@ intellij {
     downloadSources = platformDownloadSources.toBoolean()
     updateSinceUntilBuild = true
 
-//  Plugin Dependencies:
-//  https://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_dependencies.html
-//
-//  setPlugins("java")
+    setPlugins("java")
 }
 
 tasks {

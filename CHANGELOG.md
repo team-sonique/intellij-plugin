@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 ### Added
+Rewrite in Kotlin, submission for Jetbrains Marketplace 
 
 ### Changed
 
