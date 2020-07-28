@@ -26,7 +26,7 @@ class RecentProjectsAction : AnAction() {
         projectList.cellRenderer = RecentProjectsRenderer(projects.longestProjectNameLength())
         projectList.selectedIndex = if (listModel.size() > 1) 1 else 0
 
-        val popup = PopupChooserBuilder<Any>(projectList)
+        val popup = PopupChooserBuilder<Project>(projectList)
                 .setTitle("Recent Projects")
                 .setItemChoosenCallback(SelectProjectRunnable(projectList))
                 .createPopup()

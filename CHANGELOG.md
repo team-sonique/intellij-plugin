@@ -3,27 +3,16 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
-### Added
-
 ### Changed
+Update libraries for IC2020.1
 
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 ## [0.1.2]
+### Added
+Bundled Keymap
 
 ## [0.1.1]
 ### Changed
 Spell Sonique properly :facepalm:
-### Added
-Bundled Keymap
-
-
-### Security
 
 ## [0.1.0]
 ### Added
