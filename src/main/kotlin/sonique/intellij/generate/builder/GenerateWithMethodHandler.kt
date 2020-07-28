@@ -13,7 +13,8 @@ import sonique.intellij.MyBundle
 
 internal class GenerateWithMethodHandler(private val methodNameGenerator: (String) -> String) : GenerateSetterHandler() {
 
-    override fun chooseMembers(classMembers: Array<out ClassMember>?, allowEmptySelection: Boolean, copyJavadocCheckbox: Boolean, project: Project, editor: Editor?): Array<ClassMember>? {
+    override fun chooseMembers(classMembers: Array<out ClassMember>?, allowEmptySelection: Boolean,
+                               copyJavadocCheckbox: Boolean, project: Project, editor: Editor?): Array<ClassMember>? {
         val chooser = MemberChooser<ClassMember>(classMembers, allowEmptySelection, true, project)
         chooser.title = MyBundle.message("generate.with.methods")
         chooser.setCopyJavadocVisible(copyJavadocCheckbox)
@@ -48,11 +49,11 @@ internal class GenerateWithMethodHandler(private val methodNameGenerator: (Strin
     private fun createMethod(field: PsiField): PsiMethod {
         val codeStyleManager = JavaCodeStyleManager.getInstance(field.project)
 
-        val propertyName: String = codeStyleManager.variableNameToPropertyName(field.name, codeStyleManager.getVariableKind(field))
-        val parameterName: String = codeStyleManager.propertyNameToVariableName(propertyName, VariableKind.PARAMETER)
+        val propertyName = codeStyleManager.variableNameToPropertyName(field.name, codeStyleManager.getVariableKind(field))
+        val parameterName = codeStyleManager.propertyNameToVariableName(propertyName, VariableKind.PARAMETER)
 
         val elementFactory = JavaPsiFacade.getInstance(field.project).elementFactory
-        val withMethod: PsiMethod = elementFactory.createMethod(methodNameGenerator.invoke(propertyName), elementFactory.createType(field.containingClass!!))
+        val withMethod = elementFactory.createMethod(methodNameGenerator.invoke(propertyName), elementFactory.createType(field.containingClass!!))
         withMethod.parameterList.add(elementFactory.createParameter(parameterName, field.type))
         withMethod.body?.replace(methodBody(propertyName, parameterName, elementFactory))
         PsiUtil.setModifierProperty(withMethod, PsiModifier.PUBLIC, true)

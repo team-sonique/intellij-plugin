@@ -14,5 +14,5 @@ class ProjectHolderService {
 
     fun longestProjectNameLength(): Int = allOpen.stream()
             .map { p -> p.name.length }
-            .reduce(0, fun(a, b) = max(a, b))
+            .reduce(0) { a, b -> max(a, b) }
 }

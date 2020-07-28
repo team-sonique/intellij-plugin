@@ -1,12 +1,13 @@
+import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("java")
     id("org.jetbrains.kotlin.jvm") version "1.3.72"
     id("org.jetbrains.intellij") version "0.4.21"
     id("org.jetbrains.changelog") version "0.4.0"
+    id("io.gitlab.arturbosch.detekt") version "1.10.0"
 }
 
 // Import variables from gradle.properties file
@@ -49,6 +50,17 @@ intellij {
     setPlugins("java")
 }
 
+detekt {
+    config = files("./detekt-config.yml")
+    buildUponDefaultConfig = true
+
+    reports {
+        html.enabled = false
+        xml.enabled = false
+        txt.enabled = false
+    }
+}
+
 tasks {
     // Set the compatibility versions to 1.8
     withType<JavaCompile> {
@@ -60,6 +72,10 @@ tasks {
         getByName<KotlinCompile>(it) {
             kotlinOptions.jvmTarget = "1.8"
         }
+    }
+
+    withType<Detekt> {
+        jvmTarget = "1.8"
     }
 
     withType<Test>().configureEach {

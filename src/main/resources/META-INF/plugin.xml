@@ -13,6 +13,9 @@
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
 
+    <extensions defaultExtensionNs="com.intellij">
+        <bundledKeymap file="SoniqueKeymap.xml"/>
+    </extensions>
 
     <actions>
         <group id="builder.plugin.group" text="Builder..." description="Builder generator" popup="true">
@@ -40,8 +43,7 @@
                 class="sonique.intellij.recentproject.action.RecentProjectsAction"
                 text="Recent Projects">
             <add-to-group group-id="ViewRecentActions" anchor="first"/>
-            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control alt P"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="control alt P"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt p"/>
         </action>
     </actions>
 

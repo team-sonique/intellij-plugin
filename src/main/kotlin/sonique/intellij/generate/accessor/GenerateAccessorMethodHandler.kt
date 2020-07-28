@@ -12,10 +12,15 @@ import sonique.intellij.MyBundle
 
 internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (String) -> String) : GenerateGetterHandler() {
 
-    override fun chooseMembers(classMembers: Array<ClassMember>, allowEmptySelection: Boolean, copyJavadocCheckbox: Boolean, project: Project, editor: Editor?): Array<ClassMember>? {
+    override fun chooseMembers(classMembers: Array<ClassMember>,
+            allowEmptySelection: Boolean,
+            copyJavadoc: Boolean,
+            project: Project,
+            editor: Editor?
+    ): Array<ClassMember>? {
         val chooser = MemberChooser(classMembers, allowEmptySelection, true, project)
         chooser.title = MyBundle.message("generate.accessor.methods")
-        chooser.setCopyJavadocVisible(copyJavadocCheckbox)
+        chooser.setCopyJavadocVisible(copyJavadoc)
         chooser.show()
 
         myToCopyJavaDoc = chooser.isCopyJavadoc

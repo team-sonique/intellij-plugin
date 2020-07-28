@@ -7,6 +7,10 @@
 ## [0.1.1]
 ### Changed
 Spell Sonique properly :facepalm:
+### Added
+Bundled Keymap
+
+
 ### Security
 
 ## [0.1.0]
