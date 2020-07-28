@@ -17,6 +17,18 @@ Spell Sonique properly :facepalm:
 ### Security
 ## [0.1.0]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.1.0]
+### Added
 Rewrite in Kotlin, submission for Jetbrains Marketplace 
 
 ### Changed
