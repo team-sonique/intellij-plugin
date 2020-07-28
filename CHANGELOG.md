@@ -2,7 +2,20 @@
 
 # Sonique Awesome IntelliJ Plugin Changelog
 
-## [Unreleased]
+## [0.1.0]
+### Added
+
+### Changed
+Spell Sonique properly :facepalm:
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.1.0]
 ### Added
 Rewrite in Kotlin, submission for Jetbrains Marketplace 
 
