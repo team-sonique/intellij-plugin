@@ -3,15 +3,14 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Changed
+- Update libraries for IC2020.2
+
 ### Added
 - Live Templates
 
 ### Removed
 - Excess documentation from template project
-
-## [0.2.0]
-### Changed
-Update libraries for IC2020.1
 
 ## [0.1.2]
 ### Added
