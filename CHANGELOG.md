@@ -4,10 +4,10 @@
 
 ## [Unreleased]
 ### Added
-Live Templates
+- Live Templates
 
 ### Removed
-Excess documentation from template project
+- Excess documentation from template project
 
 ## [0.2.0]
 ### Changed
@@ -15,13 +15,13 @@ Update libraries for IC2020.1
 
 ## [0.1.2]
 ### Added
-Bundled Keymap
+- Bundled Keymap
 
 ## [0.1.1]
 ### Changed
-Spell Sonique properly :facepalm:
+- Spell Sonique properly :facepalm:
 
 ## [0.1.0]
 ### Added
-Rewrite in Kotlin, submission for Jetbrains Marketplace 
+- Rewrite in Kotlin, submission for Jetbrains Marketplace 
 
