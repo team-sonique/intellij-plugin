@@ -1,4 +1,4 @@
-package sonique.intellij.recentproject.action
+package sonique.intellij.openprojects.action
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.WindowManager

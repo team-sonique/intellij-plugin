@@ -1,4 +1,4 @@
-package sonique.intellij.recentproject.service
+package sonique.intellij.openprojects.service
 
 import com.intellij.openapi.project.Project
 import org.hamcrest.CoreMatchers.equalTo

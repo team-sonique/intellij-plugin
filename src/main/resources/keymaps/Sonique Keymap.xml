@@ -1,7 +1,7 @@
 <keymap version="1" name="Sonique Keymap" parent="Mac OS X">
     <action id="ContextHelp" />
 
-    <action id="sonique.plugin.recent.projects">
+    <action id="sonique.plugin.open.projects">
         <keyboard-shortcut first-keystroke="ctrl alt p" />
     </action>
 

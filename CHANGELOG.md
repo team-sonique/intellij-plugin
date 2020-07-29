@@ -6,13 +6,14 @@
 ### Added
 
 ### Changed
-
+ - repackage
+ - readme formatting
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-
+ - initialise Project Holder
 ### Security
 ## [0.2.1]
 ### Changed

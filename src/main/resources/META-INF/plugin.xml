@@ -9,7 +9,7 @@
     <depends>com.intellij.modules.java</depends>
 
     <projectListeners>
-        <listener class="sonique.intellij.recentproject.listener.ProjectAuditListener"
+        <listener class="sonique.intellij.openprojects.listener.ProjectAuditListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
 
@@ -24,11 +24,11 @@
             <action id="builder.plugin.generate.with.method"
                     class="sonique.intellij.generate.builder.GenerateWithMethodAction"
                     text="With Method"
-                    description="Generate 'With' Methods"/>
+                    description="Generate 'with' Methods"/>
             <action id="builder.plugin.generate.with.name.method"
                     class="sonique.intellij.generate.builder.GenerateWithNameMethodAction"
                     text="WithName Method"
-                    description="Generate 'WithName' Methods"/>
+                    description="Generate 'withName' Methods"/>
         </group>
 
         <group id="accessor.plugin.group" text="Accessor..." description="Accessor generator" popup="true">
@@ -39,9 +39,9 @@
                     description="Generate accessor methods"/>
         </group>
 
-        <action id="sonique.plugin.recent.projects"
-                class="sonique.intellij.recentproject.action.RecentProjectsAction"
-                text="Recent Projects">
+        <action id="sonique.plugin.open.projects"
+                class="sonique.intellij.openprojects.action.OpenProjectsAction"
+                text="Open Projects">
             <add-to-group group-id="ViewRecentActions" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt p"/>
         </action>
