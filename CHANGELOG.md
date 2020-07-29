@@ -4,16 +4,11 @@
 
 ## [Unreleased]
 ### Added
-
-### Changed
-
-### Deprecated
+Live Templates
 
 ### Removed
+Excess documentation from template project
 
-### Fixed
-
-### Security
 ## [0.2.0]
 ### Changed
 Update libraries for IC2020.1

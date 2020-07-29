@@ -1,0 +1,75 @@
+<templateSet group="Sonique Awesome Utils">
+    <template name="eht" value=" @Override&#10; public int hashCode() {&#10;    return org.apache.commons.lang3.builder.HashCodeBuilder.reflectionHashCode(this);&#10; }&#10;&#10; @Override&#10; public boolean equals(Object o) {&#10;    return org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals(this, o);&#10; }&#10;&#10; @Override&#10; public String toString() {&#10;    return org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString(this, org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE);&#10; }" description="equals hashcode toString" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="COMPLETION" value="false" />
+            <option name="JAVA_CODE" value="true" />
+            <option name="JAVA_COMMENT" value="false" />
+            <option name="JAVA_STRING" value="false" />
+        </context>
+    </template>
+    <template name="nyi" value="throw new UnsupportedOperationException(&quot;Not yet implemented&quot;);" description="Throws &quot;Not yet implemented&quot; exception" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="COMPLETION" value="false" />
+            <option name="JAVA_CODE" value="true" />
+            <option name="JAVA_COMMENT" value="false" />
+            <option name="JAVA_STRING" value="false" />
+        </context>
+    </template>
+    <template name="testt" value="@org.junit.Test&#10;@com.googlecode.yatspec.junit.Table({&#10;    @com.googlecode.yatspec.junit.Row({&quot;$END$&quot;}),&#10;    @com.googlecode.yatspec.junit.Row({&quot;&quot;})&#10;})&#10;public void $METHOD_NAME$() {&#10;    throw new UnsupportedOperationException(&quot;Not yet implemented&quot;);&#10;}" description="Yatspec Table Test Method" toReformat="false" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="COMPLETION" value="false" />
+            <option name="JAVA_CODE" value="true" />
+            <option name="JAVA_COMMENT" value="false" />
+            <option name="JAVA_STRING" value="false" />
+        </context>
+    </template>
+    <template name="sdep" value="@sonique.annotations.SoniqueDeprecated(reason=&quot;$1&quot;, use=&quot;$2&quot;, date=&quot;$3&quot;)" description="Sonique Deprecated" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+        <context>
+            <option name="JAVA_DECLARATION" value="true" />
+            <option name="JAVA_EXPRESSION" value="true" />
+            <option name="JAVA_STATEMENT" value="true" />
+        </context>
+    </template>
+    <template name="bean" value="@org.springframework.context.annotation.Bean&#10;public $RETURN_TYPE$ $METHOD_NAME$() {&#10;    return new $RETURN_TYPE$($END$);&#10;}" description="Java Context Spring Bean" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+        <variable name="RETURN_TYPE" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+        <variable name="METHOD_NAME" expression="decapitalize(RETURN_TYPE)" defaultValue="" alwaysStopAt="false" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="nullValue" value="private static final $CLASS_NAME$ NULL_$CONSTANT_NAME$ = new $CLASS_NAME$(null);&#10; &#10;public static $CLASS_NAME$ null$CLASS_NAME$() {&#10;    return NULL_$CONSTANT_NAME$;&#10;} &#10;" description="Null Value Constant and Accessor" toReformat="false" toShortenFQNames="true">
+        <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+        <variable name="CONSTANT_NAME" expression="capitalizeAndUnderscore(className())" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_DECLARATION" value="true" />
+        </context>
+    </template>
+    <template name="AS" value="sonique.types.StringValueUtils.asString($SELECTION$)$END$" description="asString" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+        <context>
+            <option name="JAVA_EXPRESSION" value="true" />
+        </context>
+    </template>
+    <template name="N" value="new $COMPLETEME$$END$($SELECTION$)" description="surround with new instance" toReformat="false" toShortenFQNames="true">
+        <variable name="COMPLETEME" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="COMPLETION" value="true" />
+            <option name="JAVA_EXPRESSION" value="true" />
+            <option name="JAVA_STATEMENT" value="true" />
+            <option name="JAVA_STRING" value="true" />
+        </context>
+    </template>
+    <template name="S" value="$END$($SELECTION$)" description="surround with statement" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="COMPLETION" value="true" />
+            <option name="JAVA_EXPRESSION" value="true" />
+            <option name="JAVA_STATEMENT" value="true" />
+            <option name="JAVA_STRING" value="true" />
+        </context>
+    </template>
+    <template name="Q" value="&quot;$SELECTION$&quot;$END$" description="Surround with {}" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+</templateSet>

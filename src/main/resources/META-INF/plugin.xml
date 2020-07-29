@@ -15,6 +15,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <bundledKeymap file="Sonique Keymap.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/Sonique.xml"/>
     </extensions>
 
     <actions>
@@ -22,20 +23,19 @@
             <add-to-group group-id="GenerateGroup" relative-to-action="GenerateEquals" anchor="after"/>
             <action id="builder.plugin.generate.with.method"
                     class="sonique.intellij.generate.builder.GenerateWithMethodAction"
-                    text="with Method"
+                    text="With Method"
                     description="Generate 'With' Methods"/>
             <action id="builder.plugin.generate.with.name.method"
                     class="sonique.intellij.generate.builder.GenerateWithNameMethodAction"
-                    text="withName Method"
+                    text="WithName Method"
                     description="Generate 'WithName' Methods"/>
         </group>
-
 
         <group id="accessor.plugin.group" text="Accessor..." description="Accessor generator" popup="true">
             <add-to-group group-id="GenerateGroup" relative-to-action="GenerateEquals" anchor="after"/>
             <action id="builder.plugin.generate.accessor.method"
                     class="sonique.intellij.generate.accessor.GenerateAccessorMethodAction"
-                    text="accessor Method"
+                    text="Accessor Method"
                     description="Generate accessor methods"/>
         </group>
 
@@ -46,5 +46,4 @@
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt p"/>
         </action>
     </actions>
-
 </idea-plugin>
