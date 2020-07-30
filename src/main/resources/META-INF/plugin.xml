@@ -8,11 +8,6 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.java</depends>
 
-    <projectListeners>
-        <listener class="sonique.intellij.openprojects.listener.ProjectAuditListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </projectListeners>
-
     <extensions defaultExtensionNs="com.intellij">
         <bundledKeymap file="Sonique Keymap.xml"/>
         <defaultLiveTemplates file="/liveTemplates/Sonique.xml"/>

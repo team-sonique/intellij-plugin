@@ -3,18 +3,13 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
-### Added
-
 ### Changed
  - repackage
  - readme formatting
-### Deprecated
-
-### Removed
-
 ### Fixed
- - initialise Project Holder
+ - closed Projects still showing in open dialog
 ### Security
+
 ## [0.2.1]
 ### Changed
 - Update libraries for IC2020.2
