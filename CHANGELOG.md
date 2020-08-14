@@ -7,6 +7,7 @@
 
 ### Changed
 - git action workflows from upstream template
+- Gradle Wrapper upgrade to v6.6
 ### Deprecated
 
 ### Removed
