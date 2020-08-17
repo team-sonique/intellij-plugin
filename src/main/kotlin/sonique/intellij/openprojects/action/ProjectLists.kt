@@ -13,7 +13,7 @@ internal class ProjectLists(private val pm: ProjectManager) {
         val openProjects = pm.openProjects
 
         val listModel = DefaultListModel<Project>()
-        listModel.addElement(currentProject);
+        listModel.addElement(currentProject)
         openProjects.stream()
                 .filter { p -> p != currentProject }
                 .forEach { p -> listModel.addElement(p) }
@@ -22,7 +22,7 @@ internal class ProjectLists(private val pm: ProjectManager) {
         projectList.cellRenderer = OpenProjectsRenderer(longestProjectName(openProjects))
         projectList.selectedIndex = if (listModel.size() > 1) 1 else 0
 
-        return projectList;
+        return projectList
     }
 
     fun longestProjectName(openProjects: Array<Project>): Int {
