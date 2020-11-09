@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 ### Added
+- attempt to keep recent projects in order of most recently active
 
 ### Changed
 - git action workflows from upstream template

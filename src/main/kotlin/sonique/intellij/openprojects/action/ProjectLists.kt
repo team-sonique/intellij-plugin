@@ -2,33 +2,34 @@ package sonique.intellij.openprojects.action
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManager
+import com.intellij.openapi.project.ProjectManagerListener
 import com.intellij.ui.components.JBList
-import com.intellij.util.containers.stream
+import sonique.intellij.openprojects.action.ProjectListUtil.longestProjectName
 import javax.swing.DefaultListModel
 import javax.swing.JList
 
-internal class ProjectLists(private val pm: ProjectManager) {
+internal class ProjectLists(pm: ProjectManager) : ProjectManagerListener {
+    private val openProjects = DefaultListModel<Project>()
 
-    fun build(currentProject: Project): JList<Project> {
-        val openProjects = pm.openProjects
-
-        val listModel = DefaultListModel<Project>()
-        listModel.addElement(currentProject)
-        openProjects.stream()
-                .filter { p -> p != currentProject }
-                .forEach { p -> listModel.addElement(p) }
-
-        val projectList: JList<Project> = JBList<Project>(listModel)
-        projectList.cellRenderer = OpenProjectsRenderer(longestProjectName(openProjects))
-        projectList.selectedIndex = if (listModel.size() > 1) 1 else 0
-
-        return projectList
+    init {
+        pm.openProjects.forEach { openProjects.addElement(it) }
     }
 
-    fun longestProjectName(openProjects: Array<Project>): Int {
-        return openProjects.stream()
-                .map { p -> p!!.name.length }
-                .max(Int::compareTo)
-                .orElse(0)
+    override fun projectOpened(project: Project) {
+        openProjects.addElement(project)
+    }
+
+    override fun projectClosed(project: Project) {
+        openProjects.removeElement(project)
+    }
+
+    fun build(currentProject: Project): JList<Project> {
+        openProjects.removeElement(currentProject)
+        openProjects.add(0, currentProject)
+
+        return JBList(openProjects).apply {
+            cellRenderer = OpenProjectsRenderer(longestProjectName(openProjects))
+            selectedIndex = if (openProjects.size() > 1) 1 else 0
+        }
     }
 }
