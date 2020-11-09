@@ -12,7 +12,8 @@ import sonique.intellij.MyBundle
 
 internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (String) -> String) : GenerateGetterHandler() {
 
-    override fun chooseMembers(classMembers: Array<ClassMember>,
+    override fun chooseMembers(
+            classMembers: Array<ClassMember>,
             allowEmptySelection: Boolean,
             copyJavadoc: Boolean,
             project: Project,

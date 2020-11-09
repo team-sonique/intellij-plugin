@@ -13,8 +13,13 @@ import sonique.intellij.MyBundle
 
 internal class GenerateWithMethodHandler(private val methodNameGenerator: (String) -> String) : GenerateSetterHandler() {
 
-    override fun chooseMembers(classMembers: Array<out ClassMember>?, allowEmptySelection: Boolean,
-                               copyJavadocCheckbox: Boolean, project: Project, editor: Editor?): Array<ClassMember>? {
+    override fun chooseMembers(
+            classMembers: Array<out ClassMember>?,
+            allowEmptySelection: Boolean,
+            copyJavadocCheckbox: Boolean,
+            project: Project,
+            editor: Editor?
+    ): Array<ClassMember>? {
         val chooser = MemberChooser<ClassMember>(classMembers, allowEmptySelection, true, project)
         chooser.title = MyBundle.message("generate.with.methods")
         chooser.setCopyJavadocVisible(copyJavadocCheckbox)

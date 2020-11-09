@@ -3,7 +3,13 @@
 
 formatting:
   Indentation:
-    active: true
+    continuationIndentSize: 8
+  ParameterListWrapping:
+    indentSize: 8
+  MaximumLineLength:
+    maxLineLength: 150
+  NoWildcardImports:
+    active: false
 
 style:
   WildcardImport:
