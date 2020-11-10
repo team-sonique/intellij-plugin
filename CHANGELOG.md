@@ -4,6 +4,18 @@
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.2.4]
+### Added
 - attempt to keep recent projects in order of most recently active
 
 ### Changed
