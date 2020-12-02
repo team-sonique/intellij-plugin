@@ -4,11 +4,10 @@
 
 ## [Unreleased]
 ### Added
-- attempt to keep recent projects in order of most recently active
 
 ### Changed
-- git action workflows from upstream template
-- Gradle Wrapper upgrade to v6.7
+-  updates for 2020.3
+
 ### Deprecated
 
 ### Removed
@@ -16,6 +15,14 @@
 ### Fixed
 
 ### Security
+## [0.2.4]
+### Added
+- attempt to keep recent projects in order of most recently active
+
+### Changed
+- git action workflows from upstream template
+- Gradle Wrapper upgrade to v6.7
+
 ## [0.2.2]
 ### Changed
  - repackage

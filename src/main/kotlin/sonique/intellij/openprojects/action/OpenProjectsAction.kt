@@ -14,24 +14,23 @@ object OpenProjectsAction : AnAction() {
     private val windowManager = WindowManager.getInstance()
 
     override fun actionPerformed(e: AnActionEvent) {
-        e.project?.let { project ->
-            PopupChooserBuilder(lists.build(project))
-                    .setTitle(MyBundle.message("open.projects"))
-                    .setItemChosenCallback(this::callbackFor)
-                    .createPopup().apply {
-                        showCenteredInCurrentWindow(project)
-                    }
+        e.project?.let {
+            PopupChooserBuilder(lists.build(it))
+                .setTitle(MyBundle.message("open.projects"))
+                .setItemChosenCallback(this::callbackFor)
+                .createPopup().apply {
+                    showCenteredInCurrentWindow(it)
+                }
         }
     }
 
     private fun callbackFor(project: Project) {
-        val projectFrame = windowManager.getFrame(project)
-        val frameState = projectFrame!!.extendedState
-        if ((frameState and Frame.ICONIFIED) == Frame.ICONIFIED) {
-            // restore the frame if it is minimized
-            projectFrame.extendedState = (frameState xor Frame.ICONIFIED)
+        windowManager.getFrame(project)?.apply {
+            if ((extendedState and Frame.ICONIFIED) == Frame.ICONIFIED) {
+                extendedState = (extendedState xor Frame.ICONIFIED)
+            }
+            toFront()
+            requestFocus()
         }
-        projectFrame.toFront()
-        projectFrame.requestFocus()
     }
 }
