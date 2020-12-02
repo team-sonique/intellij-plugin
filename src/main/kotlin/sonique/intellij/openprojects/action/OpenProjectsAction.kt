@@ -4,14 +4,21 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.project.ProjectManager
 import com.intellij.openapi.ui.popup.PopupChooserBuilder
 import com.intellij.openapi.wm.WindowManager
+import com.intellij.util.messages.MessageBus
 import sonique.intellij.MyBundle
 import java.awt.Frame
 
 object OpenProjectsAction : AnAction() {
     private val lists = ProjectLists(service())
     private val windowManager = WindowManager.getInstance()
+
+    init {
+        val connection = service<MessageBus>().connect()
+        connection.subscribe(ProjectManager.TOPIC, lists)
+    }
 
     override fun actionPerformed(e: AnActionEvent) {
         e.project?.let {
