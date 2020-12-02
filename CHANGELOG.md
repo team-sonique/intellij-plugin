@@ -6,6 +6,18 @@
 ### Added
 
 ### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.2.5]
+### Added
+
+### Changed
 -  updates for 2020.3
 
 ### Deprecated
