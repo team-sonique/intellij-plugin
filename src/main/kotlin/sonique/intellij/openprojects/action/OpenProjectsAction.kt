@@ -8,6 +8,7 @@ import com.intellij.openapi.project.ProjectManager
 import com.intellij.openapi.ui.popup.PopupChooserBuilder
 import com.intellij.openapi.wm.WindowManager
 import com.intellij.util.messages.MessageBus
+import com.intellij.util.messages.MessageBusConnection
 import sonique.intellij.MyBundle
 import java.awt.Frame
 
@@ -16,13 +17,14 @@ object OpenProjectsAction : AnAction() {
     private val windowManager = WindowManager.getInstance()
 
     init {
-        val connection = service<MessageBus>().connect()
+        val messageBus = service<MessageBus>()
+        val connection: MessageBusConnection = messageBus.connect()
         connection.subscribe(ProjectManager.TOPIC, lists)
     }
 
     override fun actionPerformed(e: AnActionEvent) {
         e.project?.let {
-            PopupChooserBuilder(lists.build(it))
+            PopupChooserBuilder<Project>(lists.build(it))
                 .setTitle(MyBundle.message("open.projects"))
                 .setItemChosenCallback(this::callbackFor)
                 .createPopup().apply {

@@ -85,7 +85,7 @@ tasks {
 
     listOf("compileKotlin", "compileTestKotlin").forEach {
         getByName<KotlinCompile>(it) {
-            kotlinOptions.apiVersion = "1.4" //Idea runs 1.3OpenProjectsAction.
+            kotlinOptions.apiVersion = "1.3" //Idea runs 1.3
             kotlinOptions.jvmTarget = "1.8"
         }
     }

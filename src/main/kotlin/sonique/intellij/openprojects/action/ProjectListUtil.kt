@@ -8,5 +8,5 @@ internal object ProjectListUtil {
             (0 until openProjects.size)
                     .map { openProjects.getElementAt(it) }
                     .map { p -> p!!.name.length }
-                    .maxOrNull() ?: 0
+                    .max() ?: 0
 }
