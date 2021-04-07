@@ -3,6 +3,7 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+## [0.2.6]
 ### Added
 
 ### Changed
