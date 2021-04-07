@@ -35,7 +35,8 @@ dependencies {
     testImplementation("org.mockito:mockito-core:3.9.0")
     testImplementation("org.mockito:mockito-inline:3.9.0")
     testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
 }
 
 // Configure gradle-intellij-plugin plugin.
