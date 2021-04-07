@@ -35,5 +35,5 @@ internal class ProjectListUtilsTest {
     }
 
     private fun listModelOf(vararg projects: Project) =
-            projects.fold(DefaultListModel<Project>()) { a, p -> a.apply { addElement(p) } }
+        projects.fold(DefaultListModel<Project>()) { a, p -> a.apply { addElement(p) } }
 }

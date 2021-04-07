@@ -11,14 +11,15 @@ import com.intellij.psi.codeStyle.VariableKind
 import com.intellij.psi.util.PsiUtil
 import sonique.intellij.MyBundle
 
-internal class GenerateWithMethodHandler(private val methodNameGenerator: (String) -> String) : GenerateSetterHandler() {
+internal class GenerateWithMethodHandler(private val methodNameGenerator: (String) -> String) :
+    GenerateSetterHandler() {
 
     override fun chooseMembers(
-            classMembers: Array<out ClassMember>?,
-            allowEmptySelection: Boolean,
-            copyJavadocCheckbox: Boolean,
-            project: Project,
-            editor: Editor?
+        classMembers: Array<out ClassMember>?,
+        allowEmptySelection: Boolean,
+        copyJavadocCheckbox: Boolean,
+        project: Project,
+        editor: Editor?
     ): Array<ClassMember>? {
         val chooser = MemberChooser<ClassMember>(classMembers, allowEmptySelection, true, project)
         chooser.title = MyBundle.message("generate.with.methods")
@@ -37,7 +38,7 @@ internal class GenerateWithMethodHandler(private val methodNameGenerator: (Strin
             if (!GetterSetterPrototypeProvider.isReadOnlyProperty(field)) {
                 val templateMethod = generateMethodPrototype(field)
                 field.containingClass?.findMethodBySignature(templateMethod, false)
-                        ?: return arrayOf(PsiGenerationInfo(templateMethod))
+                    ?: return arrayOf(PsiGenerationInfo(templateMethod))
             }
         }
         return GenerationInfo.EMPTY_ARRAY
@@ -54,23 +55,31 @@ internal class GenerateWithMethodHandler(private val methodNameGenerator: (Strin
     private fun createMethod(field: PsiField): PsiMethod {
         val codeStyleManager = JavaCodeStyleManager.getInstance(field.project)
 
-        val propertyName = codeStyleManager.variableNameToPropertyName(field.name, codeStyleManager.getVariableKind(field))
+        val propertyName =
+            codeStyleManager.variableNameToPropertyName(field.name, codeStyleManager.getVariableKind(field))
         val parameterName = codeStyleManager.propertyNameToVariableName(propertyName, VariableKind.PARAMETER)
 
         val elementFactory = JavaPsiFacade.getInstance(field.project).elementFactory
-        val withMethod = elementFactory.createMethod(methodNameGenerator.invoke(propertyName), elementFactory.createType(field.containingClass!!))
+        val withMethod = elementFactory.createMethod(
+            methodNameGenerator.invoke(propertyName),
+            elementFactory.createType(field.containingClass!!)
+        )
         withMethod.parameterList.add(elementFactory.createParameter(parameterName, field.type))
         withMethod.body?.replace(methodBody(propertyName, parameterName, elementFactory))
         PsiUtil.setModifierProperty(withMethod, PsiModifier.PUBLIC, true)
         return withMethod
     }
 
-    private fun methodBody(propertyName: String, parameterName: String, elementFactory: PsiElementFactory): PsiCodeBlock {
+    private fun methodBody(
+        propertyName: String,
+        parameterName: String,
+        elementFactory: PsiElementFactory
+    ): PsiCodeBlock {
         val methodBodyBuilder: StringBuilder = StringBuilder()
-                .append("{\n")
-                .append("this.").append(propertyName).append("=").append(parameterName).append(";\n")
-                .append("return this;\n")
-                .append("}\n")
+            .append("{\n")
+            .append("this.").append(propertyName).append("=").append(parameterName).append(";\n")
+            .append("return this;\n")
+            .append("}\n")
 
         return elementFactory.createCodeBlockFromText(methodBodyBuilder.toString(), null)
     }

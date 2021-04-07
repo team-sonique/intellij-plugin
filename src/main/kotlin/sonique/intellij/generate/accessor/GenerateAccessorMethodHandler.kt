@@ -10,14 +10,15 @@ import com.intellij.psi.codeStyle.JavaCodeStyleManager
 import com.intellij.psi.util.PsiUtil
 import sonique.intellij.MyBundle
 
-internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (String) -> String) : GenerateGetterHandler() {
+internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (String) -> String) :
+    GenerateGetterHandler() {
 
     override fun chooseMembers(
-            classMembers: Array<ClassMember>,
-            allowEmptySelection: Boolean,
-            copyJavadoc: Boolean,
-            project: Project,
-            editor: Editor?
+        classMembers: Array<ClassMember>,
+        allowEmptySelection: Boolean,
+        copyJavadoc: Boolean,
+        project: Project,
+        editor: Editor?
     ): Array<ClassMember>? {
         val chooser = MemberChooser(classMembers, allowEmptySelection, true, project)
         chooser.title = MyBundle.message("generate.accessor.methods")
@@ -34,7 +35,7 @@ internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (S
             val field = classMember.element
             val templateMethod = generateMethodPrototype(field)
             field.containingClass?.findMethodBySignature(templateMethod, false)
-                    ?: return arrayOf(PsiGenerationInfo(templateMethod))
+                ?: return arrayOf(PsiGenerationInfo(templateMethod))
         }
         return GenerationInfo.EMPTY_ARRAY
     }
@@ -50,8 +51,13 @@ internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (S
         return method
     }
 
-    private fun createMethod(codeStyleManager: JavaCodeStyleManager, field: PsiField, elementFactory: PsiElementFactory): PsiMethod {
-        val propertyName = codeStyleManager.variableNameToPropertyName(field.name, codeStyleManager.getVariableKind(field))
+    private fun createMethod(
+        codeStyleManager: JavaCodeStyleManager,
+        field: PsiField,
+        elementFactory: PsiElementFactory
+    ): PsiMethod {
+        val propertyName =
+            codeStyleManager.variableNameToPropertyName(field.name, codeStyleManager.getVariableKind(field))
 
         val accessorMethod = elementFactory.createMethod(methodNameGenerator.invoke(propertyName), field.type)
         accessorMethod.body!!.replace(methodBody(field, elementFactory))
@@ -64,9 +70,9 @@ internal class GenerateAccessorMethodHandler(private val methodNameGenerator: (S
 
     private fun methodBody(field: PsiField, elementFactory: PsiElementFactory): PsiCodeBlock {
         val methodBodyBuilder = StringBuilder()
-                .append("{\n")
-                .append("return ").append(field.name).append(";\n")
-                .append("}\n")
+            .append("{\n")
+            .append("return ").append(field.name).append(";\n")
+            .append("}\n")
 
         return elementFactory.createCodeBlockFromText(methodBodyBuilder.toString(), null)
     }
