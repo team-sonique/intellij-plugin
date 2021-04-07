@@ -3,19 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
-## [0.2.6]
-### Added
-
 ### Changed
 - updates for 2021.1
 
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 ## [0.2.5]
 ### Added
 
