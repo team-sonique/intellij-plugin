@@ -3,6 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Added
+- bundled dictionary
+- keymap extending new macOS keymap
 ## [0.2.7]
 ### Changed
 - updates for 2021.1

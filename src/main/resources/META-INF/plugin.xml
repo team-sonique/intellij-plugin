@@ -10,7 +10,9 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <bundledKeymap file="Sonique Keymap.xml"/>
+        <bundledKeymap file="Sonique Keymap 10.5+.xml"/>
         <defaultLiveTemplates file="/liveTemplates/Sonique.xml"/>
+        <spellchecker.bundledDictionaryProvider implementation="sonique.intellij.SoniqueDictionary"/>
     </extensions>
 
     <actions>

@@ -1,0 +1,28 @@
+<keymap version="1" name="Sonique Keymap 10.5+" parent="Mac OS X 10.5+">
+    <action id="ContextHelp"/>
+
+    <action id="sonique.plugin.open.projects">
+        <keyboard-shortcut first-keystroke="ctrl alt p"/>
+    </action>
+
+    <action id="$LRU">
+        <keyboard-shortcut first-keystroke="ctrl alt l"/>
+    </action>
+
+    <action id="Editor LRU">
+        <keyboard-shortcut first-keystroke="ctrl alt l"/>
+    </action>
+
+    <action id="Run">
+        <keyboard-shortcut first-keystroke="shift f10"/>
+        <keyboard-shortcut first-keystroke="f13"/>
+    </action>
+
+    <action id="Maven.Reimport">
+        <keyboard-shortcut first-keystroke="f15"/>
+    </action>
+
+    <action id="CompileProject">
+        <keyboard-shortcut first-keystroke="f16"/>
+    </action>
+</keymap>
