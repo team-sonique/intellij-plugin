@@ -16,6 +16,7 @@
     <action id="Run">
         <keyboard-shortcut first-keystroke="shift f10"/>
         <keyboard-shortcut first-keystroke="f13"/>
+        <keyboard-shortcut first-keystroke="ctrl r"/>
     </action>
 
     <action id="Maven.Reimport">
