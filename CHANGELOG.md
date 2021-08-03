@@ -3,6 +3,8 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Added
+- compatibility for 2021.2
 ## [0.2.8]
 ### Added
 - bundled dictionary
