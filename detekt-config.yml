@@ -13,5 +13,6 @@ style:
   WildcardImport:
     excludeImports:
       - 'com.intellij.*'
+      - 'java.util.*'
   MaxLineLength:
     maxLineLength: 150
