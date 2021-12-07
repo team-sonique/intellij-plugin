@@ -3,36 +3,32 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+
+## [0.2.11]
 ### Changed
 - updates from template
 - add 2021.2 compatability
+
 ## [0.2.10]
 ### Changed
 - improvements to recent projects list
+
 ## [0.2.9]
 ### Added
 - compatibility for 2021.2
+
 ## [0.2.8]
 ### Added
 - bundled dictionary
 - keymap extending new macOS keymap
+
 ## [0.2.7]
 ### Changed
 - updates for 2021.1
 
 ## [0.2.5]
-### Added
-
 ### Changed
 -  updates for 2020.3
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.2.4]
 ### Added
@@ -43,12 +39,6 @@
 - Gradle Wrapper upgrade to v6.7
 
 ## [0.2.2]
-### Changed
- - repackage
- - readme formatting
-### Fixed
- - closed Projects still showing in open dialog
-### Security
 
 ## [0.2.1]
 ### Changed
@@ -70,5 +60,4 @@
 
 ## [0.1.0]
 ### Added
-- Rewrite in Kotlin, submission for Jetbrains Marketplace 
-
+- Rewrite in Kotlin, submission for Jetbrains Marketplace
