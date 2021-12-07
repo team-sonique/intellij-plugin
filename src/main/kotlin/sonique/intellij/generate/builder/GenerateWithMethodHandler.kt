@@ -21,7 +21,7 @@ internal class GenerateWithMethodHandler(private val methodNameGenerator: (Strin
         project: Project,
         editor: Editor?
     ): Array<ClassMember>? {
-        val chooser = MemberChooser<ClassMember>(classMembers, allowEmptySelection, true, project)
+        val chooser = MemberChooser(classMembers, allowEmptySelection, true, project)
         chooser.title = MyBundle.message("generate.with.methods")
         chooser.setCopyJavadocVisible(copyJavadocCheckbox)
         chooser.show()

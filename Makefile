@@ -6,5 +6,5 @@ clean:
 
 .PHONY: build
 build:
-	gradlew check build
+	gradlew check runInspections build
 	cp ./build/libs/sonique-intellij-plugin* ~/Downloads/.

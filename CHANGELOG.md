@@ -3,6 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Changed
+- updates from template
+- add 2021.2 compatability
 ## [0.2.10]
 ### Changed
 - improvements to recent projects list

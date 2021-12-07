@@ -57,7 +57,7 @@
         </context>
     </template>
 
-    <template name="N" value="new $COMPLETEME$$END$($SELECTION$)" description="surround with new instance" toReformat="false" toShortenFQNames="true">
+    <template name="N" value="new $COMPLETEME$$END$($SELECTION$)" description="Surround with new instance" toReformat="false" toShortenFQNames="true">
         <variable name="COMPLETEME" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="COMPLETION" value="true" />
@@ -67,7 +67,7 @@
         </context>
     </template>
 
-    <template name="S" value="$END$($SELECTION$)" description="surround with statement" toReformat="false" toShortenFQNames="true">
+    <template name="S" value="$END$($SELECTION$)" description="Surround with statement" toReformat="false" toShortenFQNames="true">
         <context>
             <option name="COMPLETION" value="true" />
             <option name="JAVA_EXPRESSION" value="true" />
