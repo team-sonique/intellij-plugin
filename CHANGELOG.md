@@ -3,6 +3,8 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+
+## [0.2.13]
 ### Changed
 - add 2022.1 compatability again
 
