@@ -6,6 +6,10 @@
 
 ## [0.2.13]
 ### Changed
+- add 2022.2 compatability again
+
+## [0.2.13]
+### Changed
 - add 2022.1 compatability again
 
 ## [0.2.12]
