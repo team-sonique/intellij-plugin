@@ -7,6 +7,7 @@ concordion
 dbmigrator
 deserialiser
 doogal
+erebor
 ffestiniog
 fttc
 ftth
@@ -24,6 +25,8 @@ offnet
 onnet
 openreach
 pacman
+pilotdev
+pilottest
 primable
 raktar
 repoman
