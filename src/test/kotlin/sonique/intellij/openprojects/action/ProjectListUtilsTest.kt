@@ -3,34 +3,26 @@ package sonique.intellij.openprojects.action
 import com.intellij.openapi.project.Project
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert.assertThat
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.mockito.Mockito
-import org.mockito.Mockito.mock
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.mock
 import sonique.intellij.openprojects.action.ProjectListUtil.longestProjectName
 import javax.swing.DefaultListModel
 
-internal class ProjectListUtilsTest {
-    private val project1 = mock(Project::class.java)
-    private val project2 = mock(Project::class.java)
-    private val project3 = mock(Project::class.java)
-
-    @BeforeEach
-    internal fun setupMocks() {
-        Mockito.`when`(project1.name).thenReturn("abcdef")
-        Mockito.`when`(project2.name).thenReturn("abcdefgh")
-        Mockito.`when`(project3.name).thenReturn("abcd")
-    }
+class ProjectListUtilsTest {
+    private val project1 = mock<Project> { on {name} doReturn "abcdef"}
+    private val project2 = mock<Project> { on {name} doReturn "abcdefgh" }
+    private val project3 = mock<Project> { on {name} doReturn "abcd"}
 
     @Test
-    internal fun calculatesMaxLength() {
+    fun calculatesMaxLength() {
         assertThat(longestProjectName(listModelOf(project1, project2, project3)), CoreMatchers.equalTo(8))
         assertThat(longestProjectName(listModelOf(project1, project3)), CoreMatchers.equalTo(6))
         assertThat(longestProjectName(listModelOf(project3)), CoreMatchers.equalTo(4))
     }
 
     @Test
-    internal fun statsWithZeroLength() {
+    fun statsWithZeroLength() {
         assertThat(longestProjectName(DefaultListModel()), CoreMatchers.equalTo(0))
     }
 

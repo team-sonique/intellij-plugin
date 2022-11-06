@@ -2,19 +2,19 @@ package sonique.intellij.openprojects.action
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManager
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.whenever
 import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.mock
 import javax.swing.JList
 
 internal class ProjectListsTest {
-    private var project1 = mock<Project>().apply { whenever(name).thenReturn("abcdef") }
-    private var project2 = mock<Project>().apply { whenever(name).thenReturn("abcdefgh") }
-    private var project3 = mock<Project>().apply { whenever(name).thenReturn("abcd") }
+    private var project1 = mock<Project> { on { name } doReturn "abcdef" }
+    private var project2 = mock<Project> { on { name } doReturn "abcdefgh" }
+    private var project3 = mock<Project> { on { name } doReturn "abcd" }
 
-    private val pm = mock<ProjectManager>().apply { whenever(openProjects).thenReturn(arrayOf(project1, project2, project3)) }
+    private val pm = mock<ProjectManager> { on {openProjects} doReturn arrayOf(project1, project2, project3) }
 
     @Test
     internal fun removesProjectsAndUpdateMaxNameLength() {
