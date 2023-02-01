@@ -9,7 +9,7 @@ import javax.swing.JList
 
 internal class OpenProjectsRenderer(private val longestProjectName: Int) : ColoredListCellRenderer<Project>() {
     override fun customizeCellRenderer(list: JList<out Project>, project: Project, index: Int, selected: Boolean, hasFocus: Boolean) {
-        icon = IconLoader.findIcon("/nodes/ideaProject.png")
+        icon = IconLoader.findIcon("/nodes/ideaProject.png", javaClass.classLoader)
         font = Font("Menlo", list.font.style, list.font.size)
 
         append(project.name, SimpleTextAttributes.DARK_TEXT, true)

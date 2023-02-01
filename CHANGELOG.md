@@ -3,6 +3,15 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Added
+- New keymap shortcuts for Drovio limitations 
+    - Opt-Cmd-9 : Switch Open Projects
+    - Opt-Cmd-0 : Manage Recent Projects
+    - Opt-Cmd-i : Optimise Imports
+### Changed
+- updates from template
+  - update gradle version to 7.6
+  - update kotlin version to 1.8
 
 ## [0.2.16]
 ### Changed
