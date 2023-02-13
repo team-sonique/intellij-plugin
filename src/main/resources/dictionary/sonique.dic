@@ -5,6 +5,7 @@ bskyb
 buuk
 concordion
 dbmigrator
+deserialise
 deserialiser
 doogal
 erebor
@@ -33,6 +34,8 @@ repoboy
 repoman
 rolo
 roobarb
+serialise
+serialiser
 smaug
 smpf
 sogfast

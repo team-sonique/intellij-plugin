@@ -2,24 +2,24 @@
     <action id="ContextHelp"/>
 
     <action id="sonique.plugin.open.projects">
-        <keyboard-shortcut first-keystroke="ctrl alt p"/>
         <keyboard-shortcut first-keystroke="meta alt 9" />
+        <keyboard-shortcut first-keystroke="ctrl alt p"/>
     </action>
 
     <action id="Run">
+        <keyboard-shortcut first-keystroke="ctrl r"/>
         <keyboard-shortcut first-keystroke="shift f10"/>
         <keyboard-shortcut first-keystroke="f13"/>
-        <keyboard-shortcut first-keystroke="ctrl r"/>
     </action>
 
     <action id="ManageRecentProjects">
-        <keyboard-shortcut first-keystroke="ctrl alt l" />
         <keyboard-shortcut first-keystroke="meta alt 0" />
+        <keyboard-shortcut first-keystroke="ctrl alt l" />
     </action>
 
     <action id="OptimizeImports">
-        <keyboard-shortcut first-keystroke="ctrl alt o" />
         <keyboard-shortcut first-keystroke="meta alt i" />
+        <keyboard-shortcut first-keystroke="ctrl alt o" />
     </action>
 
     <action id="Maven.Reimport">

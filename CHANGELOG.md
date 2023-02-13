@@ -5,15 +5,21 @@
 ## [Unreleased]
 
 ## [0.2.17] - 2023-02-01
-
 ### Added
-- - Opt-Cmd-9 : Switch Open Projects
-    - Opt-Cmd-0 : Manage Recent Projects
-    - Opt-Cmd-i : Optimise Imports
+- support for next EAP
+- English spelling of serialise
 
 ### Changed
-- - update gradle version to 7.6
-  - update kotlin version to 1.8
+- reordered keymapping so new shortcuts show in Presentation Assistant
+
+### Added
+- Opt-Cmd-9 : Switch Open Projects
+- Opt-Cmd-0 : Manage Recent Projects
+- Opt-Cmd-i : Optimise Imports
+
+### Changed
+- update gradle version to 7.6
+- update kotlin version to 1.8
 
 ## [0.2.16]
 
