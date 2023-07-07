@@ -3,6 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+
+## [0.2.19] - 2023-07-07
+
 ### Changed
 - updates from upstream template
 
@@ -10,12 +13,6 @@
 - dictionary entries
 
 ## [0.2.17] - 2023-02-01
-### Added
-- support for next EAP
-- English spelling of serialise
-
-### Changed
-- reordered keymapping so new shortcuts show in Presentation Assistant
 
 ### Added
 - Opt-Cmd-9 : Switch Open Projects
@@ -106,7 +103,8 @@
 ### Added
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.17...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.19...HEAD
+[0.2.19]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.17...v0.2.19
 [0.2.17]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.16...v0.2.17
 [0.2.16]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.13...v0.2.16
 [0.2.13]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.12...v0.2.13
