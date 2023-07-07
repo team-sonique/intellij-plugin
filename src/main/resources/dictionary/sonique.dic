@@ -1,13 +1,17 @@
 adsl
 appendable
+bandaid
 bango
 bskyb
 buuk
+celadon
 concordion
 dbmigrator
 deserialise
 deserialiser
 doogal
+eircode
+eirstream
 erebor
 ffestiniog
 fttc
@@ -22,8 +26,10 @@ linetest
 linetestresults
 luthor
 netstream
+nyanza
 offnet
 onnet
+openeir
 openreach
 pacman
 pilotdev
@@ -32,6 +38,7 @@ primable
 raktar
 repoboy
 repoman
+reserver
 rolo
 roobarb
 serialise
@@ -47,4 +54,6 @@ uber
 unassign
 unhold
 utcc
+viridian
+vmie
 yatspec

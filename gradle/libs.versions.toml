@@ -1,0 +1,33 @@
+[versions]
+# libraries
+annotations = "24.0.1"
+junit = "5.9.0"
+mockito = "4.8.1"
+mockito-kotlin = "4.0.0"
+# plugins
+kotlin = "1.9.0"
+changelog = "2.1.1"
+gradleIntelliJPlugin = "1.15.0"
+qodana = "0.1.13"
+kover = "0.7.2"
+
+
+[libraries]
+annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+
+junitApi = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit" }
+junitEngine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit" }
+
+mocktioCore = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mocktioInline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
+mocktioKotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" }
+
+[plugins]
+changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
+gradleIntelliJPlugin = { id = "org.jetbrains.intellij", version.ref = "gradleIntelliJPlugin" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+qodana = { id = "org.jetbrains.qodana", version.ref = "qodana" }
+
+[bundles]
+mocktio = ["mocktioCore", "mocktioInline", "mocktioKotlin"]
