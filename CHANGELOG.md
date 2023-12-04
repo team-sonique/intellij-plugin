@@ -5,6 +5,7 @@
 ## [Unreleased]
 ### Changed
 - updates from upstream template
+- add keymap shortcut - CompareClipboardWithSelection
 
 ## [0.2.19] - 2023-07-07
 

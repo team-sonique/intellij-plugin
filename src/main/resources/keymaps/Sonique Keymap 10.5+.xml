@@ -29,4 +29,8 @@
     <action id="CompileProject">
         <keyboard-shortcut first-keystroke="f16"/>
     </action>
+
+    <action id="CompareClipboardWithSelection">
+        <keyboard-shortcut first-keystroke="shift ctrl c" />
+    </action>
 </keymap>
