@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+### Changed
+
+- upstream updates to versions
+
+### Added
+
+- dictionary additions
+
 ## [0.2.21] - 2023-12-05
 
 ### Changed
