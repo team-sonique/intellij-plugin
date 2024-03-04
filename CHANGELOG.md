@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.2.22] - 2024-03-04
+
 ### Changed
 
 - upstream updates to versions
@@ -138,7 +140,8 @@
 
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.21...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.22...HEAD
+[0.2.22]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.21...v0.2.22
 [0.2.21]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.19...v0.2.21
 [0.2.19]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.17...v0.2.19
 [0.2.17]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.16...v0.2.17
