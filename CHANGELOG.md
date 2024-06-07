@@ -3,6 +3,10 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Changed
+- updates from upstream template
+  - kotlin 2.0.0
+  - gradle 8.8
 
 ## [0.2.23] - 2024-03-11
 
