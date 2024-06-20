@@ -3,6 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+
+## [0.2.25] - 2024-06-20
+
 ### Changed
 
 - updates from upstream template
@@ -157,7 +160,8 @@
 
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.24...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.25...HEAD
+[0.2.25]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.24...v0.2.25
 [0.2.24]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.23...v0.2.24
 [0.2.23]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.22...v0.2.23
 [0.2.22]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.21...v0.2.22
