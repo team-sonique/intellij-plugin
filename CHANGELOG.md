@@ -3,6 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Changed
+
+- updates from upstream template
 
 ## [0.2.24] - 2024-06-07
 
