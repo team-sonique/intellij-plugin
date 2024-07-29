@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Changed
+- update gradle wrapper to 8.9
+- tweaked dependencies
+- added osssonique to dictionary
+
 ## [0.2.25] - 2024-06-20
 
 ### Changed
