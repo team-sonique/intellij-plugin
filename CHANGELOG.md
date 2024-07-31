@@ -4,11 +4,15 @@
 
 ## [Unreleased]
 
+## [0.2.27] - 2024-07-31
+
 ### Changed
- - migrate to intellij platform plugin
+
+- migrate to intellij platform plugin
 
 ### Added
-  - live template : oss to OSSSONIQUE
+
+- live template : oss to OSSSONIQUE
 
 ## [0.2.26] - 2024-07-29
 
@@ -174,7 +178,8 @@
 
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.26...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.27...HEAD
+[0.2.27]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.26...v0.2.27
 [0.2.26]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.25...v0.2.26
 [0.2.25]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.24...v0.2.25
 [0.2.24]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.23...v0.2.24
