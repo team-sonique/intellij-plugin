@@ -1,24 +1,26 @@
 [versions]
 # libraries
+hamcrest = "2.2"
 junit = "5.10.0"
 mockito-kotlin = "5.4.0"
 
 # plugins
+changelog = "2.2.1"
+intelliJPlatform = "2.0.0"
 kotlin = "1.9.24"
-changelog = "2.2.0"
-gradleIntelliJPlugin = "1.17.4"
-qodana = "2024.1.5"
 kover = "0.8.1"
+qodana = "2024.1.5"
 
 [libraries]
 junitApi = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit" }
 junitEngine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit" }
 
+hamcrest = { module = "org.hamcrest:hamcrest", version.ref = "hamcrest" }
 mocktioKotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" }
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
-gradleIntelliJPlugin = { id = "org.jetbrains.intellij", version.ref = "gradleIntelliJPlugin" }
+intelliJPlatform = { id = "org.jetbrains.intellij.platform", version.ref = "intelliJPlatform" }
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 qodana = { id = "org.jetbrains.qodana", version.ref = "qodana" }
