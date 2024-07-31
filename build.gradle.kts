@@ -134,6 +134,10 @@ tasks {
         gradleVersion = providers.gradleProperty("gradleVersion").get()
     }
 
+    verifyPlugin {
+        argumentProviders.add(CommandLineArgumentProvider { listOf("-mute", "TemplateWordInPluginId") })
+    }
+
     publishPlugin {
         dependsOn("patchChangelog")
     }
