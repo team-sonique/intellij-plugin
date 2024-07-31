@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### Changed
+ - migrate to intellij platform plugin
+
+### Added
+  - live template : oss to OSSSONIQUE
+
 ## [0.2.26] - 2024-07-29
 
 ### Changed

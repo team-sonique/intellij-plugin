@@ -1,4 +1,10 @@
 <templateSet group="Sonique Awesome Utils">
+    <template name="oss" value="OSSSONIQUE-" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
     <template name="eht" value=" @Override&#10; public int hashCode() {&#10;    return org.apache.commons.lang3.builder.HashCodeBuilder.reflectionHashCode(this);&#10; }&#10;&#10; @Override&#10; public boolean equals(Object o) {&#10;    return org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals(this, o);&#10; }&#10;&#10; @Override&#10; public String toString() {&#10;    return org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString(this, org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE);&#10; }" description="equals hashcode toString" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="COMPLETION" value="false" />
