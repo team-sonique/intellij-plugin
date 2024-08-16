@@ -3,7 +3,8 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
-
+### Changed
+- version updates from template
 ## [0.2.27] - 2024-07-31
 
 ### Changed
