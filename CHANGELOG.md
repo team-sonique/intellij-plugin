@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- update for next EAP version
+
 ## [0.2.28] - 2024-08-16
 
 ### Changed
