@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.2.29] - 2024-09-17
+
 ### Changed
 
 - update for next EAP version
@@ -188,7 +190,8 @@
 
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.28...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.29...HEAD
+[0.2.29]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.28...v0.2.29
 [0.2.28]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.27...v0.2.28
 [0.2.27]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.26...v0.2.27
 [0.2.26]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.25...v0.2.26
