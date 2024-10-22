@@ -3,11 +3,10 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
-### Changed
-- updates from template
 
-### Added
-- dictionary additions
+## [0.2.30] - 2024-10-22
+
+- Changelog update - `v0.2.29` by @github-actions in https://github.com/team-sonique/intellij-plugin/pull/50
 
 ## [0.2.29] - 2024-09-17
 
@@ -195,7 +194,8 @@
 
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.29...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.30...HEAD
+[0.2.30]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.29...v0.2.30
 [0.2.29]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.28...v0.2.29
 [0.2.28]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.27...v0.2.28
 [0.2.27]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.26...v0.2.27
