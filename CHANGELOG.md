@@ -3,6 +3,11 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Changed
+- updates from template
+
+### Added
+- dictionary additions
 
 ## [0.2.29] - 2024-09-17
 
