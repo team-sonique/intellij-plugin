@@ -3,6 +3,10 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+### Changed
+
+- allow new EAP
+- bump platform version
 
 ## [0.2.30] - 2024-10-22
 
