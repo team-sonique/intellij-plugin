@@ -3,6 +3,9 @@
 # Sonique Awesome IntelliJ Plugin Changelog
 
 ## [Unreleased]
+
+## [0.2.31] - 2025-01-17
+
 ### Changed
 
 - allow new EAP
@@ -200,7 +203,8 @@
 
 - Rewrite in Kotlin, submission for Jetbrains Marketplace
 
-[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.30...HEAD
+[Unreleased]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.31...HEAD
+[0.2.31]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.30...v0.2.31
 [0.2.30]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.29...v0.2.30
 [0.2.29]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.28...v0.2.29
 [0.2.28]: https://github.com/team-sonique/intellij-plugin/compare/v0.2.27...v0.2.28
