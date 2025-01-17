@@ -6,6 +6,9 @@
 ### Changed
 
 - allow new EAP
+- update platform version
+- update plugin version
+- limit "sinceVersion" to 2024+
 
 ## [0.2.30] - 2024-10-22
 
