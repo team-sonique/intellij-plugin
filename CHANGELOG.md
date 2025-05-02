@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Changed
+
+- tweaks from upstream template - java21
+- update for next intellij version 252.*
+
 ## [0.2.31] - 2025-01-17
 
 ### Changed
